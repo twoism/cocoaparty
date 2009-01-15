@@ -56,7 +56,7 @@
 		self.loadedDelegate = delegate;
 		
 		NSString* url 			= [[NSString alloc] initWithFormat:@"%@%@",[self formatUrl],[self formatQueryString:params]];
-		
+		NSLog(@"requesting :: %@",url);
 		[self doRequestForUrl:url];
 		
 		NSLog(@"Delegating to:: %@ ",self.loadedDelegate);
@@ -84,6 +84,7 @@
 		for (id key in params) {
 			str = [str stringByAppendingFormat:@"%@=%@&", key, [params objectForKey:key]];
 		}
+		
 		[params release];
 		NSLog(@"query :: %@",str);
 		return str;

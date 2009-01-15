@@ -15,13 +15,16 @@ int main(int argc, char *argv[])
 	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 	Mock *myObject = [[Mock alloc] init];
 	
-	CocoaParty *cocoaParty   	= [[CocoaParty alloc] initWithHost:@"http://missionzero.org"];
+	CocoaParty *cocoaParty   	= [[CocoaParty alloc] initWithHost:@"http://www.flickr.com"];
 	NSDictionary *params 			= [NSDictionary dictionaryWithObjectsAndKeys:
-		@"foo", @"query", 
-		@"name", @"sort_by", 
+		@"flickr.photos.search", @"method", 
+		@"json", @"format", 
+		@"YOUR_API_KEY", @"api_key", 
+		@"1", @"nojsoncallback", 
+		@"lemur", @"text", 
 	nil];
 	
-	[cocoaParty getWithPath:@"/widgets/feed/" 
+	[cocoaParty getWithPath:@"/services/rest" 
 							andParams:params 
 							withDelegate:myObject 
 							loadedSelector:@selector(loadedData:)];

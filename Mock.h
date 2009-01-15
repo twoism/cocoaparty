@@ -17,16 +17,16 @@
 -(void)loadedData:(NSDictionary*)data
 {
 	[self displayData:data];
-	
 }
 
 -(void)displayData:(id)data
 {
-	NSDictionary *feedItems = [data objectForKey:@"feedItems"];
+	NSDictionary *feedItems = [[data objectForKey:@"photos"] objectForKey:@"photo"];
 	NSLog(@"Data loaded to delegate. Containing %d items", [feedItems count]);
 	for (id item in feedItems) {
 		NSLog(@"title: %@",[item objectForKey:@"title"]);
 	}
+
 }
 
 @end
