@@ -1,0 +1,3 @@
+/Users/chrisb/Cocoa/CocoaParty/CocoaParty.h|56|warning: passing argument 1 of ‘setLoadedDelegate:’ from incompatible pointer type
+/Users/chrisb/Cocoa/CocoaParty/CocoaParty.h|101|warning: invalid receiver type ‘id*’
+/Users/chrisb/Cocoa/CocoaParty/CocoaParty.h|108|warning: passing argument 4 of ‘objc_setProperty’ from incompatible pointer type
